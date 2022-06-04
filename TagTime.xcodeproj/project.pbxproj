@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		392239DC2835F0F1000BE39F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392239DB2835F0F1000BE39F /* Constants.swift */; };
 		39EDEE0C27DFA214000AEDA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EDEE0B27DFA214000AEDA8 /* AppDelegate.swift */; };
 		39EDEE0E27DFA214000AEDA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EDEE0D27DFA214000AEDA8 /* SceneDelegate.swift */; };
 		39EDEE1027DFA214000AEDA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EDEE0F27DFA214000AEDA8 /* ViewController.swift */; };
 		39EDEE1327DFA214000AEDA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39EDEE1127DFA214000AEDA8 /* Main.storyboard */; };
 		39EDEE1527DFA216000AEDA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39EDEE1427DFA216000AEDA8 /* Assets.xcassets */; };
 		39EDEE1827DFA216000AEDA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39EDEE1627DFA216000AEDA8 /* LaunchScreen.storyboard */; };
+		39EDEE2B27DFE53E000AEDA8 /* TagClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 39EDEE2A27DFE53E000AEDA8 /* TagClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		392239DB2835F0F1000BE39F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		39EDEE0827DFA214000AEDA8 /* TagTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TagTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39EDEE0B27DFA214000AEDA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39EDEE0D27DFA214000AEDA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		39EDEE1427DFA216000AEDA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39EDEE1727DFA216000AEDA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39EDEE1927DFA216000AEDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39EDEE2A27DFE53E000AEDA8 /* TagClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TagClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		392239D72835F0A5000BE39F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39EDEE2A27DFE53E000AEDA8 /* TagClassifier.mlmodel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		392239D82835F0B2000BE39F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39EDEE0F27DFA214000AEDA8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		392239D92835F0BA000BE39F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				39EDEE1127DFA214000AEDA8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		392239DA2835F0D9000BE39F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39EDEE1427DFA216000AEDA8 /* Assets.xcassets */,
+				392239DB2835F0F1000BE39F /* Constants.swift */,
+				39EDEE1627DFA216000AEDA8 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		39EDEDFF27DFA214000AEDA8 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +96,10 @@
 			children = (
 				39EDEE0B27DFA214000AEDA8 /* AppDelegate.swift */,
 				39EDEE0D27DFA214000AEDA8 /* SceneDelegate.swift */,
-				39EDEE0F27DFA214000AEDA8 /* ViewController.swift */,
-				39EDEE1127DFA214000AEDA8 /* Main.storyboard */,
-				39EDEE1427DFA216000AEDA8 /* Assets.xcassets */,
-				39EDEE1627DFA216000AEDA8 /* LaunchScreen.storyboard */,
+				392239D72835F0A5000BE39F /* Model */,
+				392239D92835F0BA000BE39F /* View */,
+				392239D82835F0B2000BE39F /* Controller */,
+				392239DA2835F0D9000BE39F /* Supporting Files */,
 				39EDEE1927DFA216000AEDA8 /* Info.plist */,
 			);
 			path = TagTime;
@@ -138,8 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				392239DC2835F0F1000BE39F /* Constants.swift in Sources */,
 				39EDEE1027DFA214000AEDA8 /* ViewController.swift in Sources */,
 				39EDEE0C27DFA214000AEDA8 /* AppDelegate.swift in Sources */,
+				39EDEE2B27DFE53E000AEDA8 /* TagClassifier.mlmodel in Sources */,
 				39EDEE0E27DFA214000AEDA8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +332,7 @@
 				DEVELOPMENT_TEAM = AV8NQS24A9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TagTime/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to the camera to obtain clear photo of the clothing label.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,6 +361,7 @@
 				DEVELOPMENT_TEAM = AV8NQS24A9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TagTime/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to the camera to obtain clear photo of the clothing label.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
